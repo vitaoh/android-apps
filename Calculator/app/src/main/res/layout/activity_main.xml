@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tela de exibição -->
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/display_bg"
+        android:elevation="6dp"
+        android:gravity="bottom|end"
+        android:padding="24dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="48sp" />
+
+    <!-- Grade de botões -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="4"
+        android:rowCount="7">
+
+        <!-- LINHA 1 -->
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/RoundedButton.LightGray"
+            android:text="@string/btn_0" />
+
+        <Button
+            android:id="@+id/btnOpenParen"
+            style="@style/RoundedButton.LightGray"
+            android:text="(" />
+
+        <Button
+            android:id="@+id/btnCloseParen"
+            style="@style/RoundedButton.LightGray"
+            android:text=")" />
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/RoundedButton.Orange"
+            android:text="⌫" />
+
+        <!-- LINHA 2 -->
+        <Button
+            android:id="@+id/btn7"
+            style="@style/RoundedButton.Dark"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/RoundedButton.Dark"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/RoundedButton.Dark"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            style="@style/RoundedButton.Orange"
+            android:text="÷" />
+
+        <!-- LINHA 3 -->
+        <Button
+            android:id="@+id/btn4"
+            style="@style/RoundedButton.Dark"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/RoundedButton.Dark"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/RoundedButton.Dark"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            style="@style/RoundedButton.Orange"
+            android:text="×" />
+
+        <!-- LINHA 4 -->
+        <Button
+            android:id="@+id/btn1"
+            style="@style/RoundedButton.Dark"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/RoundedButton.Dark"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/RoundedButton.Dark"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/RoundedButton.Orange"
+            android:text="−" />
+
+        <!-- LINHA 5 -->
+        <Button
+            android:id="@+id/btn0"
+            style="@style/RoundedButton.Dark"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnDot"
+            style="@style/RoundedButton.Dark"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btnEqual"
+            style="@style/RoundedButton.Green"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/RoundedButton.Orange"
+            android:text="+" />
+
+    </GridLayout>
+
+</LinearLayout>
