@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#121212"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp">
 
     <!-- Tela de exibição -->
     <TextView
@@ -33,7 +33,7 @@
         <Button
             android:id="@+id/btnClear"
             style="@style/RoundedButton.LightGray"
-            android:text="@string/btn_0" />
+            android:text="@string/btn_C" />
 
         <Button
             android:id="@+id/btnOpenParen"

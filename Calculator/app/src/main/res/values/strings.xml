@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="btn_0">0</string>
+    <string name="btn_C">C</string>
 </resources>
