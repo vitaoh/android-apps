@@ -16,6 +16,7 @@
         android:id="@+id/clientInfoLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:layout_marginBottom="20dp"
         android:background="@color/primary"
         android:gravity="center_vertical"
@@ -37,7 +38,7 @@
                 android:id="@+id/tvClientName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Client Name"
+                android:text="@string/client_name"
                 android:textColor="@color/onPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -46,7 +47,7 @@
                 android:id="@+id/tvClientEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="email@client.com"
+                android:text="@string/client_email"
                 android:textColor="@color/onPrimary"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -58,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:hint="Type your name"
+        android:hint="@string/hint_type_name"
         android:inputType="textPersonName"
         android:padding="12dp"
         android:textSize="16sp" />
@@ -68,7 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:hint="Type your email"
+        android:hint="@string/hint_type_email"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textSize="16sp" />
@@ -79,10 +80,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/secondary"
+        android:background="@drawable/button_rounded"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
-        android:text="Change" />
+        android:text="@string/btn_change"
+        android:textSize="12dp" />
 
     <LinearLayout
         android:id="@+id/btnInfo"
@@ -98,20 +100,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/secondary"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_rounded"
             android:paddingLeft="24dp"
             android:paddingRight="24dp"
-            android:text="Day / Night" />
+            android:text="@string/btn_day_night"
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/btnLang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/secondary"
+            android:background="@drawable/button_rounded"
             android:paddingLeft="24dp"
             android:paddingRight="24dp"
-            android:text="Portuguese" />
+            android:text="@string/btn_language"
+            android:textSize="12dp" />
     </LinearLayout>
 
 </LinearLayout>

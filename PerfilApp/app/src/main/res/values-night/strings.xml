@@ -1,3 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Informações do cliente -->
     <string name="app_name">PerfilApp</string>
+    <string name="client_name">Client Name</string>
+    <string name="client_email">email@client.com</string>
+
+    <!-- Placeholders dos campos -->
+    <string name="hint_type_name">Type your name</string>
+    <string name="hint_type_email">Type your email</string>
+
+    <!-- Botões -->
+    <string name="btn_change">Change</string>
+    <string name="btn_day_night">Day / Night</string>
+    <string name="btn_language">Portuguese</string>
 </resources>
