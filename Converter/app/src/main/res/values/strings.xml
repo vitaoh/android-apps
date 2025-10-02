@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Converter</string>
+    <string name="app_name">Conversor</string>
+    <string name="bandeira_origem">Bandeira do país de origem</string>
+    <string name="bandeira_destino">Bandeira do país de destino</string>
+    <string name="hint_valor">Digite o valor</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="btn_inverter">↔</string>
+    <string name="resultado_padrao">Resultado: R$ 0,00</string>
+    <string name="erro_valor_invalido">Digite um valor válido</string>
+    <string name="digite_valor">Digite o valor</string>
+    <string name="titulo">Conversor Real↔Dólar</string>
 </resources>

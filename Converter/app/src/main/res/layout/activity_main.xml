@@ -1,62 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRaiz"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ConversorMoedaActivity">
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="?android:attr/windowBackground">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="148sp"
-        android:layout_margin="24sp"
-        android:fontFamily=""
-        android:text="Conversor \n Real <-> Dolar"
-        android:textAlignment="center"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:text="@string/titulo"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:gravity="center"
+        android:layout_gravity="center"/>
 
     <LinearLayout
+        android:id="@+id/layoutBandeiras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:padding="50dp"
+        android:background="@drawable/borda">
 
         <ImageView
+            android:id="@+id/ivBandeiraOrigem"
             android:layout_width="64dp"
             android:layout_height="48dp"
-            android:layout_weight="1"
-            android:src="@drawable/bandeira_brasil"></ImageView>
+            android:contentDescription="@string/bandeira_origem"
+            android:src="@drawable/bandeira_brasil"
+            android:layout_marginEnd="16dp" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="<->"></Button>
+            android:id="@+id/btnInverter"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:text="⇄"
+            android:textSize="20sp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary" />
 
         <ImageView
+            android:id="@+id/ivBandeiraDestino"
             android:layout_width="64dp"
             android:layout_height="48dp"
-            android:layout_weight="1"
-            android:src="@drawable/bandeira_eua"></ImageView>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calcular"></Button>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""></TextView>
-        </LinearLayout>
+            android:contentDescription="@string/bandeira_destino"
+            android:src="@drawable/bandeira_eua"
+            android:layout_marginStart="16dp" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/digite_valor"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_calcular"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultado_padrao"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
 </LinearLayout>
