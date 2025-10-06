@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Exemplo_ListView</string>
+    <string name="clique_curso">Clique no curso para saber informações:</string>
+    <string name="nome_tsi">Sistemas para Internet</string>
+    <string name="nome_eng">Engenharia Mecânica</string>
+    <string name="nome_ads">Análise e Desenvolvimento de Sistemas</string>
+    <string name="nome_mat">Licenciatura em Matemática</string>
+    <string name="desc_tsi">Curso superior em desenvolvimento de software com enfoque em
+sistemas Web, dando ênfase em front-end, back-end web e experiência do usuário.</string>
+    <string name="desc_eng">Curso superior de engenharia com foco em sistemas
+mecânicos.</string>
+    <string name="desc_ads">Curso superior em desenvolvimento de software com enfoque
+mais amplo em diversas plataformas (desktop, mobile, web...), incluindo análise,
+projeto, testes e manutenção.</string>
+    <string name="desc_mat">Curso superior para formação de professores de
+matemática.</string>
+</resources>
