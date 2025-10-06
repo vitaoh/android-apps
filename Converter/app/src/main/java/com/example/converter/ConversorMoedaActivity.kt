@@ -2,66 +2,50 @@ package com.example.converter
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.converter.databinding.ActivityMainBinding
 
 class ConversorMoedaActivity : AppCompatActivity() {
+
     companion object {
         private const val COTACAO_FIXA = 5.00
     }
 
-    private lateinit var ivBandeiraOrigem: ImageView
-    private lateinit var ivBandeiraDestino: ImageView
-    private lateinit var etValor: EditText
-    private lateinit var btnInverter: Button
-    private lateinit var btnCalcular: Button
-    private lateinit var tvResultado: TextView
-
+    private lateinit var binding: ActivityMainBinding
     private var deRealParaDolar = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        setupViews()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         setupListeners()
     }
 
-    private fun setupViews() {
-        ivBandeiraOrigem = findViewById(R.id.ivBandeiraOrigem)
-        ivBandeiraDestino = findViewById(R.id.ivBandeiraDestino)
-        etValor = findViewById(R.id.etValor)
-        btnInverter = findViewById(R.id.btnInverter)
-        btnCalcular = findViewById(R.id.btnCalcular)
-        tvResultado = findViewById(R.id.tvResultado)
-    }
-
     private fun setupListeners() {
-        btnInverter.setOnClickListener { inverterMoedas() }
-        btnCalcular.setOnClickListener(::calcularConversao)
+        binding.btnInverter.setOnClickListener { inverterMoedas() }
+        binding.btnCalcular.setOnClickListener(::calcularConversao)
     }
 
     private fun inverterMoedas() {
         deRealParaDolar = !deRealParaDolar
 
         if (deRealParaDolar) {
-            ivBandeiraOrigem.setImageResource(R.drawable.bandeira_brasil)
-            ivBandeiraDestino.setImageResource(R.drawable.bandeira_eua)
+            binding.ivBandeiraOrigem.setImageResource(R.drawable.bandeira_brasil)
+            binding.ivBandeiraDestino.setImageResource(R.drawable.bandeira_eua)
         } else {
-            ivBandeiraOrigem.setImageResource(R.drawable.bandeira_eua)
-            ivBandeiraDestino.setImageResource(R.drawable.bandeira_brasil)
+            binding.ivBandeiraOrigem.setImageResource(R.drawable.bandeira_eua)
+            binding.ivBandeiraDestino.setImageResource(R.drawable.bandeira_brasil)
         }
 
-        etValor.text.clear()
-        tvResultado.text = getString(R.string.resultado_padrao)
+        binding.etValor.text.clear()
+        binding.tvResultado.text = getString(R.string.resultado_padrao)
     }
 
     private fun calcularConversao(view: View) {
-        val texto = etValor.text.toString()
+        val texto = binding.etValor.text.toString()
         val valor = texto.toDoubleOrNull()
 
         if (valor == null) {
@@ -77,7 +61,6 @@ class ConversorMoedaActivity : AppCompatActivity() {
 
         val simbolo = if (deRealParaDolar) "US$" else "R$"
         val textoResultado = "Resultado: $simbolo %.2f".format(resultado)
-        tvResultado.text = textoResultado
+        binding.tvResultado.text = textoResultado
     }
-
 }
