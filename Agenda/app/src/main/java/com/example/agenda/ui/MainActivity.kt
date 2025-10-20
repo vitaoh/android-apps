@@ -1,5 +1,6 @@
 package com.example.agenda.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -69,10 +70,11 @@ class MainActivity : AppCompatActivity() {
         binding.listViewContatos.adapter = adapter
     }
 
-    fun setupListeners() {
+    private fun setupListeners() {
         binding.listViewContatos.setOnItemClickListener { _, _, position, _ ->
-            val contato = contatos[position]
-            Toast.makeText(this, "Contato: ${contato.nome}", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, DetalheContatoActivity::class.java)
+            intent.putExtra("contato", contatos[position])
+            startActivity(intent)
         }
     }
 }
