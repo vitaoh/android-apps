@@ -25,6 +25,10 @@
             android:name=".ui.DetalheContatoActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".ui.CadastroContatoActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

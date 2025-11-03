@@ -18,6 +18,13 @@
         android:textStyle="bold"
         android:textColor="#333"
         android:gravity="center" />
+    <Button
+        android:id="@+id/fabAddContato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Contato"
+        android:layout_marginBottom="24dp"
+        android:textAlignment="center"/>
     <ListView
         android:id="@+id/listViewContatos"
         android:layout_width="match_parent"
