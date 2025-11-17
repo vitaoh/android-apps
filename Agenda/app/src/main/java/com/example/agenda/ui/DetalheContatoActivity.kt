@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
+import com.bumptech.glide.Glide
 import com.example.agenda.R
 import com.example.agenda.databinding.ActivityDetalheContatoBinding
 import com.example.agenda.model.Contato
@@ -47,6 +48,11 @@ class DetalheContatoActivity : AppCompatActivity() {
         binding.tvNome.text = contato.nome
         binding.tvTelefone.text = contato.telefone
         binding.tvEmail.text = contato.email
-        binding.imgFoto.setImageResource(contato.foto)
+
+        Glide.with(this)
+            .load(contato.foto)
+            .placeholder(R.drawable.ic_launcher_foreground)
+            .error(R.drawable.ic_launcher_foreground)
+            .into(binding.imgFoto)
     }
 }

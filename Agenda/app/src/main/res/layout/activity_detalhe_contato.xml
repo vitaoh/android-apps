@@ -50,7 +50,7 @@
         android:backgroundTint="@android:color/holo_green_light"
         android:elevation="4dp"
         android:text="Ligar para este contato"
-        android:textColor="#000"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
     <Button
@@ -61,7 +61,7 @@
         android:backgroundTint="@android:color/holo_green_light"
         android:elevation="4dp"
         android:text="Enviar email para este contato"
-        android:textColor="#000"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
     <Button
